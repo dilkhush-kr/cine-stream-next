@@ -7,7 +7,7 @@
 📸 Screenshot
 ![](Screenshot.png)
 
-Week 10 Upgrade:
+ # Week 10 Upgrade: level 3
 - Redux Toolkit (Global State)
 - Favorites System
 - Search & Rating Filter
