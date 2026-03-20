@@ -1,24 +1,26 @@
-
 export const dynamic = "force-dynamic";
 
 import { getPopularMovies } from "../lib/tmdb";
 import Navbar from "../components/Navbar";
 import MovieGrid from "../components/MovieGrid";
 
-export default async function Home(){
+export default async function Home() {
 
   const movies = await getPopularMovies();
 
-  return(
+  if (!movies || movies.length === 0) {
+    return (
+      <div>
+        <Navbar />
+        <h2 style={{ padding: "20px" }}>⚠️ Unable to load movies</h2>
+      </div>
+    );
+  }
 
+  return (
     <div>
-
-      <Navbar/>
-
-      <MovieGrid movies={movies}/>
-
+      <Navbar />
+      <MovieGrid movies={movies} />
     </div>
-
-  )
-
+  );
 }

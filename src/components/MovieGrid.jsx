@@ -1,32 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useMemo } from "react";
 import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
+import RatingFilter from "./RatingFilter";
 
 export default function MovieGrid({ movies }) {
 
-  const [query,setQuery] = useState("");
+  const { search, rating } = useSelector((state) => state.filter);
 
-  const filtered = movies.filter(movie =>
-    movie.title.toLowerCase().includes(query.toLowerCase())
-  );
+  const filteredMovies = useMemo(() => {
+    return movies.filter((movie) => {
+      return (
+        movie.title.toLowerCase().includes(search.toLowerCase()) &&
+        movie.vote_average >= rating
+      );
+    });
+  }, [movies, search, rating]);
 
-  return(
+  return (
 
     <div>
 
-      <SearchBar query={query} setQuery={setQuery} />
+      <SearchBar />
+      <RatingFilter />
 
       <div className="movie-grid">
 
-        {filtered.map(movie=>(
-          <MovieCard key={movie.id} movie={movie}/>
+        {filteredMovies.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
         ))}
 
       </div>
 
     </div>
 
-  )
+  );
 }

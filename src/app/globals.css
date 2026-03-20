@@ -4,18 +4,43 @@ body{
   font-family:Arial;
 }
 
+
 .navbar{
   display:flex;
   justify-content:space-between;
-  padding:20px;
+  align-items:center;
+  padding:20px 30px;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
 }
 
 .navbar a{
-  margin-left:20px;
   color:white;
   text-decoration:none;
+  font-weight:500;
 }
 
+/* THEME BUTTON */
+.theme-btn{
+  border:none;
+  background:#222;
+  color:white;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.dark .theme-btn{
+  background:#fff;
+  color:#000;
+}
+
+/* MOVIE GRID */
 .movie-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
@@ -23,10 +48,16 @@ body{
   padding:20px;
 }
 
+/* MOVIE CARD */
 .movie-card{
   background:#1c1c1c;
   border-radius:10px;
   overflow:hidden;
+  transition:transform 0.2s;
+}
+
+.movie-card:hover{
+  transform:scale(1.05);
 }
 
 .movie-card img{
@@ -43,6 +74,7 @@ body{
   padding:0 10px 8px;
 }
 
+/* SEARCH BAR */
 .search-bar{
   width:300px;
   padding:10px;
@@ -50,4 +82,10 @@ body{
   border-radius:8px;
   border:none;
   font-size:16px;
+}
+
+/* DARK MODE */
+.dark {
+  background-color: black;
+  color: white;
 }

@@ -1,25 +1,62 @@
+// "use client";
+
+// import Link from "next/link";
+
+// export default function Navbar(){
+
+//   return(
+
+//     <nav className="navbar">
+
+//       <h1>CineStream 🎬</h1>
+
+//       <div>
+
+//         <Link href="/">Home</Link>
+
+//         <Link href="/favorites">Favorites</Link>
+
+//       </div>
+
+//     </nav>
+
+//   )
+
+// }
+
 "use client";
 
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../app/features/themeSlice";
 
-export default function Navbar(){
+export default function Navbar() {
 
-  return(
+  const dispatch = useDispatch();
+  const mode = useSelector((state) => state.theme.mode);
+  const favorites = useSelector((state) => state.favorites.items);
+
+  return (
 
     <nav className="navbar">
 
-      <h1>CineStream 🎬</h1>
+      <h1 className="logo">CineStream 🎬</h1>
 
-      <div>
+      <div className="nav-right">
 
         <Link href="/">Home</Link>
 
-        <Link href="/favorites">Favorites</Link>
+        <Link href="/favorites">
+          Favorites ({favorites.length})
+        </Link>
+
+        <button className="theme-btn" onClick={() => dispatch(toggleTheme())}>
+          {mode === "light" ? "🌙" : "☀️"}
+        </button>
 
       </div>
 
     </nav>
 
-  )
-
+  );
 }
