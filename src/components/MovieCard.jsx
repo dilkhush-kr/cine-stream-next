@@ -1,8 +1,7 @@
 
-
-
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../app/features/favoritesSlice.js";

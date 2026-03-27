@@ -13,3 +13,51 @@
 - Search & Rating Filter
 - Performance Optimization (useMemo)
 - Dark/Light Theme
+
+# week 11  testing : level 3
+
+## 🎬 CineStream - Movie App with Testing
+
+
+## 📌 Project Overview
+CineStream is a movie browsing application built using Next.js and Redux Toolkit.  
+In this project, I implemented unit and component testing using Jest and React Testing Library.
+
+---
+
+## 🚀 Features
+- Browse movies
+- Add/Remove favorites (Redux)
+- Search and filter movies
+- Responsive UI
+
+---
+
+## 🧪 Testing (Week 11 Task)
+I implemented testing for:
+
+### ✅ Component Testing
+- MovieCard (UI rendering + interaction)
+- MovieGrid (filtering logic)
+
+### ✅ Redux Testing
+- favoritesSlice (add/remove functionality)
+
+---
+
+## 🛠 Tech Stack
+- Next.js
+- React
+- Redux Toolkit
+- Jest
+- React Testing Library
+
+---
+
+## 📦 Installation
+
+```bash
+npm install
+
+👨‍💻 Author
+Dilkhush Kumar
