@@ -1,4 +1,4 @@
-**/*.test.js
+babel.config.js
 jest.config.js
 jest.setup.js
-babel.config.js
+**/*.test.js
