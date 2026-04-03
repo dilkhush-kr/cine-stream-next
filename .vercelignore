@@ -1,7 +1,4 @@
-# Testing & Babel configs
 babel.config.js
-config/babel.config.js
-
 jest.config.js
 jest.setup.js
 **/*.test.js
