@@ -111,3 +111,67 @@ How can I test that the filtering logic works correctly with different inputs?
 
 What are the best practices for writing clean and maintainable test cases in React applications? 
 How many components should be tested in a small project?
+
+
+# Prompts Used for Week 12 (Storybook Setup)
+
+## 1. Understanding Storybook Integration
+
+"How to setup Storybook in an existing Next.js project and what is the purpose of component isolation?"
+
+---
+
+## 2. Converting Existing Components to Storybook
+
+"I have a React component that uses Redux and API calls. How can I convert it into a reusable UI component for Storybook without breaking the existing app?"
+
+---
+
+## 3. Splitting Smart and UI Components
+
+"What is the best way to separate logic (Redux) and UI for a component so it works both in the app and in Storybook?"
+
+---
+
+## 4. Creating Storybook Stories
+
+"How to write a .stories.jsx file for a React component and use args to control props dynamically in Storybook?"
+
+---
+
+## 5. Handling Props (Args) in Storybook
+
+"How to configure controls in Storybook so that I can change component props like states (e.g., favorite, theme) from the UI panel?"
+
+---
+
+## 6. Fixing Tailwind CSS in Storybook
+
+"Why Tailwind CSS is not working in Storybook and how to fix global styles inside Storybook configuration?"
+
+---
+
+## 7. Handling Next.js Specific Issues
+
+"How to fix Next.js specific issues in Storybook such as Image component or routing problems?"
+
+---
+
+## 8. Creating Controlled Input Component
+
+"How to create a controlled input component in React that works in Storybook without Redux?"
+
+---
+
+## 9. Debugging Build Issues
+
+"I am getting build errors in Vercel while deploying Storybook. How to debug and fix issues related to babel config, staticDirs, and missing folders?"
+
+---
+
+## 10. Deployment of Storybook
+
+"How to deploy Storybook as a static site using Vercel and what build commands and output directory should be used?"
+
+---
+

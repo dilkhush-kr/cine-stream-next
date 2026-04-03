@@ -63,5 +63,13 @@ I implemented testing for:
 ```bash
 npm install
 
+# week 12  The Storybook Setup. : Level 3
+
+## week 12 UI image
+  📸 Screenshot
+![](ScreenshotWeek12.png)
+
+👉 Live URL: https://cine-stream-next-7qnz.vercel.app/?path=/story/components-moviecard--default
+
 👨‍💻 Author
 Dilkhush Kumar
